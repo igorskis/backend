@@ -21,10 +21,12 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'seckeyenv',
+    'phonenumber_field',
 ]
 
 LOCAL_APPS = [
     'backend.apps.homepage',
+    'backend.apps.users',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -79,6 +81,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 LANGUAGE_CODE = 'de-de'
 
